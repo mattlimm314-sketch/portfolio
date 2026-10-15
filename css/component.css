@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #111;
+    padding: 22px clamp(20px, 5.2vw, 84px);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#name{
+    font-size: clamp(2rem, 4.6vw, 4.25rem);
+    letter-spacing: -0.075em;
+    line-height: 0.95;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.container{
+    height: fit-content;
+}
+
+.main-space{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
+}
+
+.bar{
+    width: 100%;
+    height: 1px;
+    background-color: #111;
+}
+
+#navbar{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    column-gap: 30px;
+    margin-bottom: 20px;
+}
+
+#navbar > .bar {
+    grid-column: 1 / -1;
+}
+
+#links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 17px;
+    font-weight: 700;
+    column-gap: 28px;
+    margin: 0 0 5px;
+    align-items: center;
+}
+
+#links a{
+    border-bottom: 2px solid transparent;
+    padding: 5px 0;
+}
+
+#links a[aria-current="page"] {
+    border-color: #111;
+}
+
+#links a:focus-visible,
+.arrow-button:focus-visible,
+.slide-description a:focus-visible,
+.contact-row a:focus-visible {
+    outline: 3px solid;
+    outline-offset: 4px;
+}
+
+#header-page{
+    margin-top: 26px;
+}
+
+@media (max-width: 800px){
+    body{
+        padding: 18px 20px;
+    }
+    #navbar{
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+    }
+    #links{
+        column-gap: 22px;
+        margin: 0;
+    }
+
+}

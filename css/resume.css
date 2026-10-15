@@ -1,0 +1,167 @@
+.resume-content {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(44px, 7vw, 88px);
+    margin-top: 32px;
+}
+
+.resume-hero {
+    padding: clamp(22px, 4vw, 54px) 0;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+}
+
+.resume-name {
+    margin: 0 0 20px;
+    font-size: clamp(3rem, 9vw, 8rem);
+    letter-spacing: -0.09em;
+    line-height: 0.9;
+    text-transform: none;
+}
+
+.contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.contact-row a {
+    padding: 0;
+}
+
+.resume-section {
+    display: grid;
+    grid-template-columns: minmax(190px, 0.35fr) minmax(0, 1fr);
+    column-gap: clamp(24px, 5vw, 80px);
+    align-items: start;
+}
+
+.resume-section-header h2 {
+    margin: 0;
+    font-size: clamp(1.7rem, 3vw, 2.6rem);
+    letter-spacing: -0.065em;
+}
+
+.resume-section > .bar {
+    display: none;
+}
+
+.resume-section > .entry,
+.resume-section > .skills-grid,
+.resume-section > .info-line {
+    grid-column: 2;
+}
+
+.resume-section-header {
+    grid-column: 1;
+    grid-row: 1 / span 10;
+    border-top: 2px solid #111;
+    padding-top: 12px;
+}
+
+.resume-section > :nth-child(3) {
+    border-top: 2px solid #111;
+    padding-top: 12px;
+}
+
+.entry {
+    margin-bottom: 26px;
+}
+
+.entry:last-child {
+    margin-bottom: 0;
+}
+
+.entry-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: baseline;
+    margin-bottom: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.05rem;
+}
+
+.entry-role {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.entry-company,
+.entry-place {
+    font-style: italic;
+    font-weight: 600;
+}
+
+.entry-date {
+    white-space: nowrap;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.detail-list {
+    margin: 0;
+    padding-left: 22px;
+    line-height: 1.6;
+}
+
+.detail-list li {
+    margin-bottom: 4px;
+}
+
+.info-line {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 36px;
+}
+
+.skills-grid .info-line {
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .resume-section {
+        grid-template-columns: 1fr;
+        row-gap: 18px;
+    }
+
+    .resume-section-header,
+    .resume-section > .entry,
+    .resume-section > .skills-grid,
+    .resume-section > .info-line {
+        grid-column: 1;
+    }
+
+    .resume-section-header {
+        grid-row: auto;
+        padding-top: 10px;
+    }
+
+    .resume-section > :nth-child(3) {
+        border-top: 0;
+        padding-top: 0;
+    }
+
+    .entry-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .entry-date {
+        white-space: normal;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
